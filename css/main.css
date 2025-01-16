@@ -1,0 +1,16 @@
+.top_header {
+    background-color: #EA5413;
+    font-size: large;
+    width: 100%;
+    height : 60px;
+}
+.logo {
+    color: white;
+    font-size: large;
+
+}
+.nav_bar {
+    background-color: beige;
+    width: 200px;
+    height: 100vh;
+}
