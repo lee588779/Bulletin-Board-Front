@@ -3,9 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>상세글 보기</title>
+    <link rel="stylesheet" href="./../css/main.css" />
+    <link rel="stylesheet" href="./../css/board.css" />
+    <link rel="stylesheet" href="./../css/postDetail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
   </head>
   <body>
-    글작성성
+    <script type="module" src="./../js/postDetail.js"></script>
+    <div class="top_header">
+      <span class="logo">iteyes10</span>
+      <button><a href="/login.html"></a> 로그인</button>
+    </div>
+    <div class="nav_bar">
+      <li>
+        <a href="./free.html">자유게시판</a>
+      </li>
+      <li>
+        <a href="./announce.html">공지사항</a>
+      </li>
+    </div>
+    <div class="content">
+      <div id="postDetail"></div>
+    </div>
   </body>
 </html>

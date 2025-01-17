@@ -87,13 +87,15 @@ function generatePostList() {
     const postContent = document.createElement("div");
     postContent.classList.add("postContent");
 
+    const postLink = document.createElement("a");
+    postLink.href = `postDetail.html?id=${post.id}`;
     postContent.innerHTML = `
         <span class="postId">${post.id}</span>
         <span class="postTitle">${post.title}</span>
         <span class="postWriter">${post.name}</span>
         <span class="postTime">${new Date(post.time).toLocaleString()}</span>
       `;
-
+    postListContainer.appendChild(postLink);
     postListContainer.appendChild(postContent);
   });
 }
