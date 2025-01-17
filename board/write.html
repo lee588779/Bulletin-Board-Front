@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글 작성 페이지</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/write.css" />
+  </head>
+  <body>
+    <!-- 상단 헤더 -->
+    <div class="top_header">
+      <span class="logo">iteyes10</span>
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <div class="nav_bar">
+      <!-- 네비게이션 내용 추가 -->
+    </div>
+
+    <!-- 글 작성 폼 -->
+    <div class="write-post-box">
+      <h2>글 작성</h2>
+      <form id="writePostForm">
+        <div>
+          <label for="postTitle">제목</label>
+          <input
+            type="text"
+            id="postTitle"
+            name="postTitle"
+            placeholder="제목을 입력하세요"
+            required
+          />
+        </div>
+        <div>
+          <label for="postContent">내용</label>
+          <textarea
+            id="postContent"
+            name="postContent"
+            rows="10"
+            placeholder="내용을 입력하세요"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit" id="submitPostBtn">작성 완료</button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#submitPostBtn").click(function (event) {
+          event.preventDefault(); // 폼 제출 방지 (디버깅 용)
+
+          let postTitle = $("#postTitle").val().trim();
+          let postContent = $("#postContent").val().trim();
+
+          if (postTitle === "" || postContent === "") {
+            alert("제목과 내용을 입력해주세요!");
+            return;
+          }
+
+          alert("글이 작성되었습니다! 제목: " + postTitle);
+          // 실제 글 작성 로직을 추가하려면 AJAX를 사용하면 됩니다.
+        });
+      });
+    </script>
+  </body>
+</html>
