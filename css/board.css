@@ -12,6 +12,13 @@
   color: white;
   padding: 5px;
 }
+.postLink {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 부모의 텍스트 색상 상속 */
+  display: flex; /* flex로 설정하여 내부 요소들 정렬 */
+  align-items: center; /* 세로로 중앙 정렬 */
+  width: 100%;
+}
 
 .postList {
   margin-top: 20px;

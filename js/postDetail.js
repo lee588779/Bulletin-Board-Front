@@ -11,6 +11,10 @@ const boardDeatil = {
 
 function generatePostDetail() {
   const postContainer = document.getElementById("postDetail");
+  const urlParams = new URLSearchParams(window.location.search);
+  console.log(urlParams);
+  const postId = urlParams.get("id"); // URL에서 ID 추출
+  console.log(postId);
 
   const postContent = document.createElement("div");
   postContent.classList.add("post"); // 이름 변경

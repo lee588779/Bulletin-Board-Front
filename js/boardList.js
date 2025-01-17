@@ -79,7 +79,6 @@ const boardData = [
     time: "2019-02-05T 12:00:6",
   },
 ];
-
 function generatePostList() {
   const postListContainer = document.getElementById("postList");
 
@@ -87,15 +86,21 @@ function generatePostList() {
     const postContent = document.createElement("div");
     postContent.classList.add("postContent");
 
+    // 게시글 링크를 감싸는 a 태그 생성
     const postLink = document.createElement("a");
-    postLink.href = `postDetail.html?id=${post.id}`;
-    postContent.innerHTML = `
-        <span class="postId">${post.id}</span>
-        <span class="postTitle">${post.title}</span>
-        <span class="postWriter">${post.name}</span>
-        <span class="postTime">${new Date(post.time).toLocaleString()}</span>
-      `;
-    postListContainer.appendChild(postLink);
+    postLink.href = `./postDetail.html?id=${post.id}`;
+    postLink.classList.add("postLink"); // 스타일링을 위한 클래스 추가
+
+    // postLink 안에 내용을 추가
+    postLink.innerHTML = `
+      <span class="postId">${post.id}</span>
+      <span class="postTitle">${post.title}</span>
+      <span class="postWriter">${post.name}</span>
+      <span class="postTime">${new Date(post.time).toLocaleString()}</span>
+    `;
+
+    // postContent에 postLink 추가
+    postContent.appendChild(postLink);
     postListContainer.appendChild(postContent);
   });
 }
