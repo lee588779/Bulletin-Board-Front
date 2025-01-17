@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 반응형 로그인 폼</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .login-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        /* 반응형 스타일 */
+        @media (max-width: 400px) {
+            .login-box {
+                padding: 15px;
+            }
+
+            input, button {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>로그인</h2>
+        <input type="text" id="userId" placeholder="아이디">
+        <input type="password" id="userPw" placeholder="비밀번호">
+        <button id="loginBtn">로그인</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#loginBtn").click(function(){
+                let userId = $("#userId").val().trim();
+                let userPw = $("#userPw").val().trim();
+
+                if(userId === "" || userPw === ""){
+                    alert("아이디와 비밀번호를 입력하세요!");
+                    return;
+                }
+
+                alert("로그인 성공! 아이디: " + userId);
+                // 실제 로그인 기능을 추가하려면 AJAX 요청을 사용하면 돼!
+            });
+        });
+    </script>
+
+</body>
+</html>
