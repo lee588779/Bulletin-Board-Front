@@ -1,0 +1,45 @@
+.boardType {
+  font-weight: 700;
+  font-size: 24px;
+}
+.postList {
+  margin-top: 20px;
+}
+.postContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 14px;
+  min-height: 30px;
+}
+
+.postId {
+  font-weight: 100;
+  font-size: 14px;
+  color: #777;
+}
+
+.postTitle {
+  margin-left: 20px;
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50vh;
+}
+
+.postWriter {
+  font-size: 14px;
+  color: #007bff;
+  margin-right: 30px;
+}
+
+.postTime {
+  font-size: 12px;
+  color: #aaa;
+}
