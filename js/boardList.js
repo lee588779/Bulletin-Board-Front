@@ -81,11 +81,23 @@ const boardData = [
 ];
 function generatePostList() {
   const postListContainer = document.getElementById("postList");
-
+  // const urlParams = new URLSearchParams(window.location.search);
+  // const boardType = urlParams.get("boardType");
+  // console.log(boardType);
   boardData.map((post) => {
     const postContent = document.createElement("div");
     postContent.classList.add("postContent");
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const boardType = urlParams.get("boardType");
+    console.log(boardType);
+    const boardTypeDis = document.getElementById("boardTypeName");
+    if (boardType == "0") {
+      boardTypeDis.textContent = "공지사항";
+    }
+    if (boardTypeDis == "1") {
+      boardTypeDis.textContent = "자유게시판";
+    }
     // 게시글 링크를 감싸는 a 태그 생성
     const postLink = document.createElement("a");
     postLink.href = `./postDetail.html?id=${post.id}`;

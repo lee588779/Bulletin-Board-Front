@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>공지사항</title>
+    <title>자유게시판</title>
     <link rel="stylesheet" href="./../css/main.css" />
     <link rel="stylesheet" href="./../css/board.css" />
     <link
@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <script type="module" src="./../data/announcelist.js"></script>
+    <script type="module" src="./../js/boardlist.js"></script>
     <div class="top_header">
       <a href="../index.html" class="logo">iteyes10</a>
       <a href="../user/login.html">
@@ -21,15 +21,15 @@
     </div>
     <div class="nav_bar">
       <li>
-        <a href="./free.html">자유게시판</a>
+        <a href="./index.html?boardType=1">자유게시판</a>
       </li>
       <li>
-        <a href="./announce.html">공지사항</a>
+        <a href="./index.html?boardType=0">공지사항</a>
       </li>
     </div>
     <div class="content">
       <div class="boardTop">
-        <span class="boardType">공지사항</span>
+        <span class="boardType" id="boardTypeName">자유게시판</span>
         <a href="./write.html">
           <span class="postUpload">글쓰기</span>
         </a>
