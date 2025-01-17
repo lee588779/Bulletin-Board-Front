@@ -81,7 +81,9 @@ const boardData = [
 ];
 function generatePostList() {
   const postListContainer = document.getElementById("postList");
-
+  const urlParams = new URLSearchParams(window.location.search);
+  const boardType = urlParams.get("boardType");
+  console.log(boardType);
   boardData.map((post) => {
     const postContent = document.createElement("div");
     postContent.classList.add("postContent");
