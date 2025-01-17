@@ -1,7 +1,18 @@
+.boardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center the items */
+}
 .boardType {
   font-weight: 700;
   font-size: 24px;
 }
+.postUpload {
+  background-color: #ea5413;
+  color: white;
+  padding: 5px;
+}
+
 .postList {
   margin-top: 20px;
 }
