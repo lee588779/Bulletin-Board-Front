@@ -1,35 +1,3 @@
-/* 기본 스타일 */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* 배경색 */
-}
-
-/* 상단 헤더 */
-.top_header {
-  background-color: #ea5413;
-  color: white;
-  font-size: large;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-}
-
-.logo {
-  font-size: large;
-}
-
-/* 네비게이션 바 */
-.nav_bar {
-  background-color: beige;
-  width: 200px;
-  height: 100vh;
-  float: left;
-  padding: 20px;
-}
-
 /* 글 작성 폼 */
 .write-post-box {
   background: white;
