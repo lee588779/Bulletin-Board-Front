@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>자유게시판</title>
+    <title>상세글 보기</title>
     <link rel="stylesheet" href="./../css/main.css" />
     <link rel="stylesheet" href="./../css/board.css" />
+    <link rel="stylesheet" href="./../css/postDetail.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
     />
   </head>
   <body>
-    <script type="module" src="./../js/boardlist.js"></script>
+    <script type="module" src="./../js/postDetail.js"></script>
     <div class="top_header">
       <span class="logo">iteyes10</span>
       <button><a href="/login.html"></a> 로그인</button>
@@ -26,13 +27,7 @@
       </li>
     </div>
     <div class="content">
-      <div class="boardTop">
-        <span class="boardType">자유게시판</span>
-        <a href="./write.html">
-          <span class="postUpload">글쓰기</span>
-        </a>
-      </div>
-      <div class="postList" id="postList"></div>
+      <div id="postDetail"></div>
     </div>
   </body>
 </html>
